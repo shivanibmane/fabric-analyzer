@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/sidebar"
 import facegenie_logo from '@/assets/facegenie_logo.png'
 import resoluteai_logo from '@/assets/resoluteai_logo.webp'
-import { Link } from "react-router"
+import { Link, useLocation } from "react-router"
 import { Home } from 'lucide-react'
 import { Settings } from 'lucide-react'
 import { LayoutDashboard } from 'lucide-react'
@@ -19,6 +19,7 @@ import { LayoutDashboard } from 'lucide-react'
 const sidebarMenu = [{ path: '/', icon: <Home />, label: 'Home' }, { path: '/configaration', icon: <Settings />, label: 'Configaration' }, { path: '/dashboard', icon: <LayoutDashboard />, label: 'Dashboard' }]
 
 const AppSidebar = () => {
+  const location = useLocation()
   return (
     <Sidebar className="border-r-4 border-[#F92609]">
       <SidebarHeader>
