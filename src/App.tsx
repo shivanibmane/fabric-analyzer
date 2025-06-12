@@ -1,10 +1,19 @@
-import { Button } from "@/components/ui/button"
+import { Route, Routes } from "react-router"
+import Home from "./components/Home/Home"
+import MainLayout from "./components/MainLayout"
 
-function App() {
+const App = () => {
   return (
-    <div className="flex min-h-svh flex-col items-center justify-center">
-      <h1>Fabric Analyzer</h1>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<MainLayout />} >
+          <Route index element={<Home />} />
+          <Route path="/configaration" element={<div>Configaration</div>} />
+          <Route path="/dashboard" element={<div>Dashboard</div>} />
+
+        </Route>
+      </Routes>
+    </>
   )
 }
 
